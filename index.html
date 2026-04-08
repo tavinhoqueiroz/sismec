@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sismec - Manual do Sistema Educacional</title>
+
+    <style>
+        :root {
+            --azul-primario: #4C8DDA;
+            --azul-secundario: #3b82f6;
+            --cinza-claro: #f1f5f9;
+            --branco: #ffffff;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--cinza-claro);
+        }
+
+        /* Cabeçalho */
+        header {
+            background: var(--azul-primario);
+            color: var(--branco);
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        header img {
+            height: 60px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 26px;
+            font-weight: 600;
+        }
+
+        /* Menu lateral */
+        .sidebar {
+            width: 260px;
+            background: var(--azul-primario);
+            color: var(--branco);
+            height: 100vh;
+            position: fixed;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+        .sidebar h2 {
+            margin-top: 0;
+            font-size: 18px;
+            font-weight: 500;
+            color: var(--branco);
+        }
+
+        .sidebar a {
+            display: block;
+            color: var(--branco);
+            text-decoration: none;
+            margin: 12px 0;
+            padding: 6px 0;
+            border-left: 3px solid transparent;
+            transition: 0.2s;
+        }
+
+        .sidebar a:hover {
+            border-left: 3px solid var(--branco);
+            padding-left: 6px;
+        }
+
+        /* Conteúdo */
+        .content {
+            margin-left: 280px;
+            padding: 25px;
+        }
+
+        .section {
+            background: var(--branco);
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.1);
+        }
+
+        h1, h2, h3 {
+            color: var(--azul-primario);
+        }
+
+        .img-example {
+            width: 100%;
+            max-width: 550px;
+            border: 1px solid #ccc;
+            margin: 15px 0;
+            border-radius: 4px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- CABEÇALHO -->
+    <header>
+        <img src="Imagens/Logo_PMNS.png" alt="Logo Prefeitura de Nova Serrana">
+        <h1>Sismec – Sistema Educacional<br><small>Manual do Usuário</small></h1>
+    </header>
+
+    <!-- MENU LATERAL -->
+    <div class="sidebar">
+        <h2>Navegação</h2>
+        <a href="#introducao">Introdução</a>
+        <a href="#acesso">Acesso ao Sistema</a>
+        <a href="#painel">Painel Principal</a>
+        <a href="frm-controle-vagas.html">Controle de Vagas</a>
+        <a href="#relatorios">Relatórios</a>
+        <a href="#faq">FAQ</a>
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="content">
+
+        <div class="section" id="introducao">
+            <h1>Introdução</h1>
+            <p>O <strong>Sismec – Sistema Educacional</strong> foi desenvolvido exclusivamente para a Secretaria Municipal de Educação de Nova Serrana – MG, com o objetivo de modernizar e facilitar a gestão escolar.</p>
+            <p>Neste manual, você encontrará instruções detalhadas sobre cada módulo, telas e funcionalidades do sistema.</p>
+        </div>
+
+        <div class="section" id="acesso">
+            <h2>Acesso ao Sistema</h2>
+            <p>Para acessar o Sismec, utilize seu login institucional fornecido pela Secretaria
