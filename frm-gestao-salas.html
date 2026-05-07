@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sismec – Controle de Vagas</title>
+
+    <style>
+        :root {
+            --azul-primario: #3A7DFF;
+            --cinza-claro: #f1f5f9;
+            --branco: #ffffff;
+            --texto: #1e293b;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: var(--cinza-claro);
+        }
+
+        header {
+            background: var(--azul-primario);
+            color: var(--branco);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 24px;
+        }
+
+        .content {
+            padding: 25px;
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        /* QUADROS */
+        .quadro {
+            background: var(--branco);
+            padding: 25px;
+            margin: 25px auto;
+            border-radius: 8px;
+            box-shadow: 0 0 6px rgba(0,0,0,0.1);
+        }
+
+        .quadro h2 {
+            color: var(--azul-primario);
+            margin-top: 0;
+        }
+
+        .quadro ul {
+            margin-top: 10px;
+            padding-left: 20px;
+        }
+
+        /* QUADROS LADO A LADO */
+        .quadro-lado-a-lado {
+            display: flex;
+            gap: 25px;
+            align-items: flex-start;
+        }
+
+        .quadro-imagem {
+            width: 45%;
+            text-align: center;
+        }
+
+        .imagem-quadro {
+            width: 100%;
+            max-width: 520px;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+        }
+
+        .legenda {
+            margin-top: 8px;
+            font-weight: bold;
+            color: var(--azul-primario);
+        }
+
+        .quadro-texto {
+            width: 55%;
+        }
+
+        @media (max-width: 900px) {
+            .quadro-lado-a-lado {
+                flex-direction: column;
+            }
+            .quadro-imagem, .quadro-texto {
+                width: 100%;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #555;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Sismec – Controle de Vagas<br><small>Manual do Usuário</small></h1>
+    </header>
+
+    <div class="content">
+
+        <!-- QUADRO 1 – VISÃO GERAL -->
+        <div class="quadro">
+            <h2>Visão Geral do Formulário</h2>
+
+            <p><strong>Nome do Formulário:</strong> Controle de Vagas</p>
+
+            <p><strong>Finalidade:</strong><br>
+            Este formulário permite visualizar, cadastrar e atualizar a quantidade de vagas disponíveis nas turmas da rede municipal de ensino. Ele é utilizado pelas escolas e pela Secretaria de Educação para manter o controle atualizado da oferta de vagas por turno e ano de ensino.</p>
+
+            <p><strong>Principais Funcionalidades:</strong></p>
+            <ul>
+                <li>Exibir todas as turmas cadastradas com suas respectivas vagas.</li>
+                <li>Permitir a edição rápida da quantidade de vagas disponíveis.</li>
+                <li>Incluir novas turmas quando necessário.</li>
+                <li>Atualizar automaticamente a lista de vagas após cada alteração.</li>
+            </ul>
+
+            <p><strong>Quando utilizar este formulário:</strong><br>
+            Sempre que houver necessidade de ajustar a quantidade de vagas, cadastrar novas turmas ou verificar a disponibilidade atual por turno e ano de ensino.</p>
+        </div>
+
+        <!-- QUADRO 2 – TELA 01 -->
+        <div class="quadro quadro-lado-a-lado">
+
+            <div class="quadro-imagem">
+                <img src="imagens/frm-controle-vagas-01.png" alt="Tela 01" class="imagem-quadro">
+                <div class="legenda">Tela 01</div>
+            </div>
+
+            <div class="quadro-texto">
+                <h2>Vagas Disponíveis</h2>
+
+                <p><strong>Função da Tela:</strong><br>
+                Exibe todas as vagas cadastradas por turno e ano de ensino, permitindo a atualização rápida das quantidades.</p>
+
+                <p><strong>Como utilizar:</strong></p>
+                <ul>
+                    <li>Clique na coluna <strong>Vagas</strong> para editar a quantidade.</li>
+                    <li>Digite o novo valor e pressione <strong>ENTER</strong> para confirmar.</li>
+                    <li>Se não houver mais vagas, informe <strong>0</strong>.</li>
+                    <li>Se a turma não estiver listada, clique em <strong>Nova Turma</strong> para cadastrar.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- QUADRO 3 – TELA 02 -->
+        <div class="quadro quadro-lado-a-lado">
+
+            <div class="quadro-imagem">
+                <img src="imagens/frm-controle-vagas-02.png" alt="Tela 02" class="imagem-quadro">
+                <div class="legenda">Tela 02</div>
+            </div>
+
+            <div class="quadro-texto">
+                <h2>Cadastro / Edição de Vagas</h2>
+
+                <p><strong>Função da Tela:</strong><br>
+                Permite cadastrar ou editar as informações de uma turma, incluindo turno, ano de ensino e quantidade de vagas.</p>
+
+                <p><strong>Descrição dos Campos:</strong></p>
+
+                <ul>
+                    <li><strong>Turno:</strong> Selecione o turno da turma (Manhã, Tarde ou Integral).</li>
+                    <li><strong>Ano de Ensino:</strong> Escolha o ano correspondente (ex.: Pre 4, Pre5, 1º Ano ..., 2º Ano...).</li>
+                    <li><strong>Vaga:</strong> Informe a quantidade de vagas disponíveis. Use <strong>0</strong> se não houver vagas.</li>
+                    <li><strong>Gravar:</strong> Salva as informações e atualiza a lista da Tela 01.</li>
+                </ul>
+            </div>
+
+        </div>
+
+    </div>
+
+    <footer>
+        Secretaria Municipal de Educação – Nova Serrana/MG<br>
+        © Sismec – Sistema Educacional
+    </footer>
+
+</body>
+</html>
