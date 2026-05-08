@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sismec – Controle de Vagas</title>
+    <title>Sismec – Gestão de Salas</title>
 
     <style>
         :root {
@@ -106,79 +106,175 @@
 <body>
 
     <header>
-        <h1>Sismec – Controle de Vagas<br><small>Manual do Usuário</small></h1>
+        <h1>Sismec – Gestão de Salas<br><small>Manual do Usuário</small></h1>
     </header>
 
     <div class="content">
 
         <!-- QUADRO 1 – VISÃO GERAL -->
         <div class="quadro">
-            <h2>Visão Geral do Formulário</h2>
-
-            <p><strong>Nome do Formulário:</strong> Gestão de Salas</p>
+            <h2>Gestão de Salas – Visão Geral</h2>
 
             <p><strong>Finalidade:</strong><br>
-            Este formulário permite visualizar, cadastrar e atualizar a quantidade de vagas disponíveis nas turmas da rede municipal de ensino. Ele é utilizado pelas escolas e pela Secretaria de Educação para manter o controle atualizado da oferta de vagas por turno e ano de ensino.</p>
+            Esta funcionalidade permite cadastrar salas físicas, registrar suas dimensões, capacidade e controlar a alocação de turmas, garantindo que não haja conflitos de uso.</p>
 
             <p><strong>Principais Funcionalidades:</strong></p>
             <ul>
-                <li>Exibir todas as turmas cadastradas com suas respectivas vagas.</li>
-                <li>Permitir a edição rápida da quantidade de vagas disponíveis.</li>
-                <li>Incluir novas turmas quando necessário.</li>
-                <li>Atualizar automaticamente a lista de vagas após cada alteração.</li>
+                <li>Cadastro de salas com cálculo automático da área.</li>
+                <li>Cadastro de turmas vinculadas a uma sala.</li>
+                <li>Bloqueio automático para evitar duas turmas na mesma sala.</li>
+                <li>Relatórios de salas e turmas cadastradas.</li>
             </ul>
 
-            <p><strong>Quando utilizar este formulário:</strong><br>
-            Sempre que houver necessidade de ajustar a quantidade de vagas, cadastrar novas turmas ou verificar a disponibilidade atual por turno e ano de ensino.</p>
+            <p><strong>Quando utilizar:</strong><br>
+            Sempre que for necessário cadastrar novas salas, registrar turmas ou consultar a ocupação atual dos espaços.</p>
         </div>
 
-        <!-- QUADRO 2 – TELA 01 -->
+        <!-- QUADRO 2 – CADASTRO DE SALAS -->
         <div class="quadro quadro-lado-a-lado">
 
             <div class="quadro-imagem">
-                <img src="imagens/frm-controle-vagas-01.png" alt="Tela 01" class="imagem-quadro">
-                <div class="legenda">Tela 01</div>
+                <img src="imagens/frm-principal-menu-gestao-salas.png" alt="Cadastro de Salas" class="imagem-quadro">
+                <div class="legenda">Tela Principal – Gestão de Salas</div>
             </div>
 
             <div class="quadro-texto">
-                <h2>Vagas Disponíveis</h2>
+                <h2>Acesso</h2>
 
                 <p><strong>Função da Tela:</strong><br>
-                Exibe todas as vagas cadastradas por turno e ano de ensino, permitindo a atualização rápida das quantidades.</p>
+                Navegar entre os formulários do controle de gestão de salas. Clique nas opções para acessar o formulário.</p>
 
-                <p><strong>Como utilizar:</strong></p>
+                <p><strong>Opções:</strong></p>
                 <ul>
-                    <li>Clique na coluna <strong>Vagas</strong> para editar a quantidade.</li>
-                    <li>Digite o novo valor e pressione <strong>ENTER</strong> para confirmar.</li>
-                    <li>Se não houver mais vagas, informe <strong>0</strong>.</li>
-                    <li>Se a turma não estiver listada, clique em <strong>Nova Turma</strong> para cadastrar.</li>
+                    <li><strong>Cadastrar Salas.</strong> Acesso ao formulário para cadastro e manuteção das salas.</li>
+                    <li><strong>Cadastrar Turmas.</strong> Acesso ao formulário para cadastro e manuteção das turmas</li>
+                    <li><strong>Consulta Salas.</strong> Relatório das Salas.</li>
+                    <li><strong>Consulta Turmas.</strong> Relatório das Turmas.</li>
                 </ul>
+
             </div>
 
         </div>
 
-        <!-- QUADRO 3 – TELA 02 -->
+        <!-- QUADRO 3 – CADASTRO DE SALAS -->
         <div class="quadro quadro-lado-a-lado">
 
             <div class="quadro-imagem">
-                <img src="imagens/frm-controle-vagas-02.png" alt="Tela 02" class="imagem-quadro">
-                <div class="legenda">Tela 02</div>
+                <img src="imagens/frm-cadastro-salas.png" alt="Cadastro de Salas" class="imagem-quadro">
+                <div class="legenda">Tela – Cadastro de Salas</div>
             </div>
 
             <div class="quadro-texto">
-                <h2>Cadastro / Edição de Vagas</h2>
+                <h2>Cadastro de Salas</h2>
 
                 <p><strong>Função da Tela:</strong><br>
-                Permite cadastrar ou editar as informações de uma turma, incluindo turno, ano de ensino e quantidade de vagas.</p>
+                Permite registrar as salas disponíveis na escola, informando suas dimensões e capacidade.</p>
 
                 <p><strong>Descrição dos Campos:</strong></p>
-
                 <ul>
-                    <li><strong>Turno:</strong> Selecione o turno da turma (Manhã, Tarde ou Integral).</li>
-                    <li><strong>Ano de Ensino:</strong> Escolha o ano correspondente (ex.: Pre 4, Pre5, 1º Ano ..., 2º Ano...).</li>
-                    <li><strong>Vaga:</strong> Informe a quantidade de vagas disponíveis. Use <strong>0</strong> se não houver vagas.</li>
-                    <li><strong>Gravar:</strong> Salva as informações e atualiza a lista da Tela 01.</li>
+                    <li><strong>Descrição:</strong> Nome ou identificação da sala (ex.: Sala 01, Laboratório, Auditório).</li>
+                    <li><strong>Comprimento:</strong> Medida em metros.</li>
+                    <li><strong>Largura:</strong> Medida em metros.</li>
+                    <li><strong>Área:</strong> Calculada automaticamente pelo sistema (Comprimento × Largura).</li>
+                    <li><strong>Quant de Armários:</strong> Quantidade de armários que constam na sala.</li>
+                    <li><strong>Capacidade:</strong> Quantidade máxima de alunos que a sala comporta.</li>
                 </ul>
+
+                <p><strong>Regras Importantes:</strong></p>
+                <ul>
+                    <li>A área é calculada automaticamente e não pode ser alterada manualmente.</li>
+                    <li>Todos os campos são obrigatórios.</li>
+                    <li>A capacidade deve ser um número inteiro maior que zero.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- QUADRO 4 – CADASTRO DE TURMAS -->
+        <div class="quadro quadro-lado-a-lado">
+
+            <div class="quadro-imagem">
+                <img src="imagens/frm-cadastro-turma.png" alt="Cadastro de Turmas" class="imagem-quadro">
+                <div class="legenda">Tela – Cadastro de Turmas</div>
+            </div>
+
+            <div class="quadro-texto">
+                <h2>Cadastro de Turmas</h2>
+
+                <p><strong>Função da Tela:</strong><br>
+                Permite cadastrar turmas e vinculá-las a uma sala específica.</p>
+
+                <p><strong>Descrição dos Campos:</strong></p>
+                <ul>
+                    <li><strong>Descrição:</strong> Nome identificador da turma(ex.: 1o Ano A, Pre 5 B).</li>
+                    <li><strong>Ano de Ensino:</strong> Selecione o ano de ensino correspondente.</li>
+                    <li><strong>Turno:</strong> Manhã, Tarde ou Integrral</li>
+                    <li><strong>Sala:</strong> Selecione a sala onde a turma esta alocada. ENTER para pesqusar sala livres.</li>
+                    <li><strong>Total de Alunos:</strong> Número de alunos total da turma.</li>
+                    <li><strong>Alunos Atípicos com Laudo:</strong> Número de alunos especiais da turma (com laudo).</li>
+                </ul>
+
+                <p><strong>Regras do Sistema:</strong></p>
+                <ul>
+                    <li>O sistema não permite cadastramento de duas turmas na mesma sala e turno.</li>
+                    <li>O sistema alertar caso a quantidade de alunos ultrapasse a capacidade da sala.</li>
+                    <li>Todos os campos são obrigatórios.</li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- QUADRO 5 – RELATÓRIO DE SALAS -->
+        <div class="quadro quadro-lado-a-lado">
+
+            <div class="quadro-imagem">
+                <img src="imagens/frm-consulta-salas.png" alt="Relatório de Salas" class="imagem-quadro">
+                <div class="legenda">Relatório – Salas Cadastradas</div>
+            </div>
+
+            <div class="quadro-texto">
+                <h2>Relatório de Salas</h2>
+
+                <p><strong>Função do Relatório:</strong><br>
+                Exibe todas as salas cadastradas, com suas dimensões, área e capacidade.</p>
+
+                <p><strong>Informações exibidas:</strong></p>
+                <ul>
+                    <li>Descrição da sala</li>
+                    <li>Comprimento e largura</li>
+                    <li>Área total</li>
+                    <li>Capacidade máxima</li>
+                </ul>
+
+                <p>Este relatório é utilizado para conferência e planejamento da ocupação dos espaços.</p>
+            </div>
+
+        </div>
+
+        <!-- QUADRO 6 – RELATÓRIO DE TURMAS -->
+        <div class="quadro quadro-lado-a-lado">
+
+            <div class="quadro-imagem">
+                <img src="imagens/frm-consulta-turmas.png" alt="Relatório de Turmas" class="imagem-quadro">
+                <div class="legenda">Relatório – Turmas Cadastradas</div>
+            </div>
+
+            <div class="quadro-texto">
+                <h2>Relatório de Turmas</h2>
+
+                <p><strong>Função do Relatório:</strong><br>
+                Lista todas as turmas cadastradas, suas salas e quantidade de alunos.</p>
+
+                <p><strong>Informações exibidas:</strong></p>
+                <ul>
+                    <li>Descrição da turma</li>
+                    <li>Ano de ensino</li>
+                    <li>Turno</li>
+                    <li>Sala alocada</li>
+                    <li>Quantidade de alunos</li>
+                </ul>
+
+                <p>Este relatório auxilia na verificação da ocupação das salas e na organização geral da escola.</p>
             </div>
 
         </div>
